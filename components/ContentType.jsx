@@ -1,7 +1,14 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Box, FormControl, Chip, Autocomplete, TextField } from "@mui/material";
+import {
+  Box,
+  FormControl,
+  Chip,
+  Autocomplete,
+  TextField,
+  Slider,
+} from "@mui/material";
 import { withStyles } from "@mui/styles";
 import styled from "@emotion/styled";
 import contentTypeData from "@/dto/contentType";
@@ -13,6 +20,57 @@ export default function ContentType() {
   const [contentTitle, setContentTitle] = useState("");
 
   const autoCompleteRef = useRef();
+
+  const marks = [
+    {
+      value: 100,
+      label: "100",
+    },
+    {
+      value: 200,
+      label: "200",
+    },
+    {
+      value: 300,
+      label: "300",
+    },
+    {
+      value: 400,
+      label: "400",
+    },
+    {
+      value: 500,
+      label: "500",
+    },
+    {
+      value: 600,
+      label: "600",
+    },
+    {
+      value: 700,
+      label: "700",
+    },
+    {
+      value: 800,
+      label: "800",
+    },
+    {
+      value: 900,
+      label: "900",
+    },
+    {
+      value: 1000,
+      label: "1000",
+    },
+  ];
+
+  function valuetext(value) {
+    return `${value}`;
+  }
+
+  function valueLabelFormat(value) {
+    return marks.findIndex((mark) => mark.value == value) + 1;
+  }
 
   const onTypeChange = (type) => {
     if (autoCompleteRef.current) {
@@ -39,8 +97,8 @@ export default function ContentType() {
   useEffect(() => {}, [contentType]);
 
   return (
-    <Box className="w-desktop-inside text-primary">
-      <Box className="h-[125px] flex items-center border-b-[1px] border-border-bottom-color">
+    <Box className="w-desktop-inside text-primary px-8">
+      <Box className="h-[125px] flex items-center border-b-[1px] border-border-divider">
         <Box>
           <p className="text-2xl font-medium">Content Type</p>
           <p className="text-base">
@@ -70,7 +128,7 @@ export default function ContentType() {
           </Box>
         </Box>
 
-        <Box className="flex flex-col justify-between h-[100px] max-h-[140px] mt-10">
+        <Box className="flex flex-col justify-between h-[100px] max-h-[140px] mt-8">
           <p className="text-lg font-medium">
             Which type of "{contentType}" content do you want to create?
           </p>
@@ -97,9 +155,43 @@ export default function ContentType() {
               }}
               className="w-[517px] bg-[#3A39404D] text-base"
               fullWidth
+              onChange={(title) => onTitleChange(title)}
               renderInput={(params) => (
                 <StyledTextField {...params} label="Select" />
               )}
+            />
+          </Box>
+        </Box>
+
+        <Box className="flex flex-col justify-between h-[116px] mt-8 mb-[283px]">
+          <p className="flex items-center text-base font-medium">
+            Set the number of words for output text.
+          </p>
+
+          <Box className="w-343 mt-[30px] h-[64x] flex bg-[#09090d] rounded-xl items-center">
+            <p className="w-[37px] font-medium -mt-4 text-center">0</p>
+            <Slider
+              aria-label="Always visible"
+              defaultValue={700}
+              getAriaValueText={valuetext}
+              step={100}
+              marks={marks}
+              min={0}
+              max={1000}
+              valueLabelDisplay="auto"
+              className="py-8 bg-home-bottom-nav text-primary"
+              sx={{
+                "& .MuiSlider-thumb": {
+                  color: "#FF7DFF",
+                },
+                "& .MuiSlider-track": {
+                  background: "linear-gradient(to right, #523FD7, #FF7DFF)",
+                },
+                "& .MuiSlider-markLabel": {
+                  color: "#fff",
+                  marginTop: "16.5px",
+                },
+              }}
             />
           </Box>
         </Box>

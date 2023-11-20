@@ -16,11 +16,17 @@ module.exports = {
       colors: {
         primary: "#FFFFFF",
         border: {
-          "bottom-color": "#3A3940",
+          divider: "#3A3940",
         },
         button: {
           "primary-background": "#523FD7",
         },
+        home: {
+          "bottom-nav": "#09090D",
+        },
+      },
+      borderRadius: {
+        button: "32px",
       },
     },
   },
