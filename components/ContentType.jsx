@@ -108,12 +108,12 @@ export default function ContentType() {
       </Box>
 
       <FormControl fullWidth>
-        <Box className="flex flex-col justify-between h-[100px] max-h-[140px] mt-10">
-          <p className="text-lg font-medium">
+        <Box className="sm:mb-8 lg:mb-0 flex flex-col justify-between h-[100px] max-h-[140px] mt-10">
+          <p className="text-lg font-medium sm:mb-4 lg:mb-0">
             What type of content are you creating?
           </p>
 
-          <Box className="flex xs:flex-wrap gap-x-3 gap-y-[2px]">
+          <Box className="chips-container gap-x-3 gap-y-[2px]">
             {contentTypes.map((type) => (
               <Chip
                 label={type}
@@ -167,7 +167,7 @@ export default function ContentType() {
             Set the number of words for output text.
           </p>
 
-          <Box className="sm:w-[470px] xs:w-[342px]  w-343 mt-[30px] h-[64x] flex bg-[#09090d] rounded-xl items-center">
+          <Box className="slider-wrapper w-343 mt-[30px] h-[64x] flex bg-[#09090d] rounded-xl items-center">
             <p className="w-[37px] font-medium -mt-4 text-center">0</p>
             <Slider
               aria-label="Always visible"
