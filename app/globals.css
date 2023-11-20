@@ -15,39 +15,3 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
-/* @media (min-width: 375px) {
-  .chips-container {
-    width: 500px !important;
-  }
-}
-
-@media (min-width: 745px) {
-  .chips-container {
-    width: 800px !important;
-  }
-}
-
-@media (min-width: 1440px) {
-  .chips-container {
-    width: 900px !important;
-  }
-}
- */
-/* @media (min-width: 375px) {
-  .slider-wrapper {
-    width: 480px !important;
-  }
-}
-
-@media (min-width: 745px) {
-  .slider-wrapper {
-    width: 620px !important;
-  }
-}
-
-@media (min-width: 1440px) {
-  .slider-wrapper {
-    width: 1372px !important;
-  }
-} */

@@ -108,7 +108,7 @@ export default function ContentType() {
       </Box>
 
       <FormControl fullWidth>
-        <Box className="sm:mb-8 lg:mb-0 flex flex-col justify-between h-[100px] max-h-[140px] mt-10">
+        <Box className="flex flex-col justify-between h-full mt-10 sm:mb-8 md:mb-0">
           <p className="text-lg font-medium sm:mb-4 lg:mb-0">
             What type of content are you creating?
           </p>
@@ -128,7 +128,7 @@ export default function ContentType() {
           </Box>
         </Box>
 
-        <Box className="flex flex-col justify-between h-[100px] max-h-[140px] mt-8">
+        <Box className="flex flex-col justify-between h-[100px] max-h-[140px] sm:mt-1 md:mt-8">
           <p className="text-lg font-medium">
             Which type of "{contentType}" content do you want to create?
           </p>
