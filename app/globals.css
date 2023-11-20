@@ -16,7 +16,7 @@ body {
   flex-wrap: wrap;
 }
 
-@media (min-width: 375px) {
+/* @media (min-width: 375px) {
   .chips-container {
     width: 500px !important;
   }
@@ -33,8 +33,8 @@ body {
     width: 900px !important;
   }
 }
-
-@media (min-width: 375px) {
+ */
+/* @media (min-width: 375px) {
   .slider-wrapper {
     width: 480px !important;
   }
@@ -50,4 +50,4 @@ body {
   .slider-wrapper {
     width: 1372px !important;
   }
-}
+} */

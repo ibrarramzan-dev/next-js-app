@@ -97,9 +97,9 @@ export default function ContentType() {
   useEffect(() => {}, [contentType]);
 
   return (
-    <Box className="px-8 w-desktop-inside text-primary">
-      <Box className="h-[125px] flex items-center border-b-[1px] border-border-divider">
-        <Box>
+    <Box className="w-full px-8 text-primary">
+      <Box className=" h-[125px] flex items-center border-b-[1px] border-border-divider">
+        <Box className="w-full">
           <p className="text-2xl font-medium">Content Type</p>
           <p className="text-base">
             Choose a content type that best fits your needs.

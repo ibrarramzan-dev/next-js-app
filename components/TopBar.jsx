@@ -5,7 +5,7 @@ import editIcon from "@/public/assets/images/edit-icon.png";
 
 function TopBar({ pageName, pageTitle, userFname, profileImg }) {
   return (
-    <Box className="sm:w-full h-[110px] bg-home-bottom-nav border-b-[1px] border-border-divider flex justify-between items-center px-8">
+    <Box className="sm:w-full h-[110px] bg-home-bottom-nav border-b-[1px] border-border-divider flex justify-between items-center px-8 sm:px-5">
       <Box className="flex w-64 h-12">
         <Button variant="outlined" className="w-[47px] h-[47px] bg-[#18171c]">
           <Image src={backArrow} alt="Back" />
@@ -21,7 +21,7 @@ function TopBar({ pageName, pageTitle, userFname, profileImg }) {
 
       <Box className="w-[170px]">
         <Box className="flex text-primary">
-          <Box>
+          <Box className="sm:hidden md:block">
             <p className="text-base font-medium">{userFname}</p>
             <p className="text-base font-light">Change profile</p>
           </Box>
