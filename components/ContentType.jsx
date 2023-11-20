@@ -97,7 +97,7 @@ export default function ContentType() {
   useEffect(() => {}, [contentType]);
 
   return (
-    <Box className="w-desktop-inside text-primary px-8">
+    <Box className="px-8 w-desktop-inside text-primary">
       <Box className="h-[125px] flex items-center border-b-[1px] border-border-divider">
         <Box>
           <p className="text-2xl font-medium">Content Type</p>
@@ -113,7 +113,7 @@ export default function ContentType() {
             What type of content are you creating?
           </p>
 
-          <Box className="flex flex-wrap gap-x-3 gap-y-[2px]">
+          <Box className="flex xs:flex-wrap gap-x-3 gap-y-[2px]">
             {contentTypes.map((type) => (
               <Chip
                 label={type}
@@ -121,7 +121,7 @@ export default function ContentType() {
                 variant="outlined"
                 className={`w-fit h-[49px] ${
                   contentType === type ? "bg-button-primary-background" : ""
-                } text-primary font-normal text-sm px-7 py-[14px] rounded-[30px]`}
+                } text-primary font-normal text-sm px-7 py-[14px] rounded-[30px] border-gray-300`}
                 key={type}
               />
             ))}
@@ -153,8 +153,7 @@ export default function ContentType() {
                   fill: "#fff !important",
                 },
               }}
-              className="w-[517px] bg-[#3A39404D] text-base"
-              fullWidth
+              className="sm:w-[470px] xs:w-[342px] md:w-[526px] bg-[#3A39404D] text-base"
               onChange={(title) => onTitleChange(title)}
               renderInput={(params) => (
                 <StyledTextField {...params} label="Select" />
@@ -168,7 +167,7 @@ export default function ContentType() {
             Set the number of words for output text.
           </p>
 
-          <Box className="w-343 mt-[30px] h-[64x] flex bg-[#09090d] rounded-xl items-center">
+          <Box className="sm:w-[470px] xs:w-[342px]  w-343 mt-[30px] h-[64x] flex bg-[#09090d] rounded-xl items-center">
             <p className="w-[37px] font-medium -mt-4 text-center">0</p>
             <Slider
               aria-label="Always visible"

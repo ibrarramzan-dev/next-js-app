@@ -6,6 +6,12 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "375px",
+      md: "745px",
+      lg: "1728px",
+      xl: "1440px",
+    },
     extend: {
       width: {
         mob: "375px",
@@ -23,6 +29,9 @@ module.exports = {
         },
         home: {
           "bottom-nav": "#09090D",
+        },
+        gray: {
+          300: "#616066",
         },
       },
       borderRadius: {
